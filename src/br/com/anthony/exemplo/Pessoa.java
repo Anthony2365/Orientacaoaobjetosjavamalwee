@@ -1,4 +1,4 @@
-package br.com.anthony;
+package br.com.anthony.exemplo;
 
 public class Pessoa {
 	
@@ -31,6 +31,13 @@ public class Pessoa {
 	 public void setSexo(String sexo) {
 	this.sexo = sexo;
 	 }
+	 
+	@Override
+	public String toString() {
+		return "Nome: " + nome 
+				+ " \nanoDeNascimento: " + anoDeNascimento 
+				+ " \nsexo: " + sexo;
+	}
 	 
 }
 

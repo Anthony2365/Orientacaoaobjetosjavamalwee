@@ -1,4 +1,4 @@
-package br.com.anthony;
+package br.com.anthony.exemplo;
 
 public class Carro {
 	
