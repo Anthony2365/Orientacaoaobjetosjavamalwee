@@ -1,4 +1,4 @@
-package br.com.anthony.pessoa;
+package br.com.senai.endereco;
 
 public class Cidade extends Estado {
 	private String nomeDaCidade;
