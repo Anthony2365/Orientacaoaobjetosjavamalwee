@@ -40,7 +40,7 @@ public class Produto {
 	public void setValorUnitarioDoProduto(double valorUnitarioDoProduto) {
 		this.valorUnitarioDoProduto = valorUnitarioDoProduto;
 	}
-	public double getQuantidadeDoProduto() {
+	public int getQuantidadeDoProduto() {
 		return quantidadeDoProduto;
 	}
 	public void setQuantidadeDoProduto(int quantidadeDoProduto) {

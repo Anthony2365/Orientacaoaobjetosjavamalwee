@@ -47,6 +47,10 @@ public class ProgramaPrincipal {
 				produtoController.ListarProduto(produtos);
 				break;
 				
+			case 5 :
+				produtoController.editarProduto(produtos);
+				break;
+				
 			case 9:
 				sair = true; 
 				break;
@@ -60,7 +64,6 @@ public class ProgramaPrincipal {
 		
 		System.out.println("Sistema finalizado!");
 		
-		
 	}
-
+	 
 }
