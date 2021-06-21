@@ -45,14 +45,14 @@ public class Produto {
 	}
 	public void setQuantidadeDoProduto(int quantidadeDoProduto) {
 		this.quantidadeDoProduto = quantidadeDoProduto;
-		setValorTotalDoProduto();
+		
 		
 	}
 	public double getValorTotalDoProduto() {
 		return valorTotalDoProduto;
 	}
-	private void setValorTotalDoProduto() {
-		this.valorTotalDoProduto = getQuantidadeDoProduto() * getValorUnitarioDoProduto();
+	public void setValorTotalDoProduto(double valorTotalDoProduto) {
+		this.valorTotalDoProduto = valorTotalDoProduto;
 	}
 	
 	
