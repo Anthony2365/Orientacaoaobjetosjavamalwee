@@ -1,5 +1,6 @@
 package br.com.anthony.pessoa;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -20,20 +21,7 @@ public class PessoaController {
 		return tec.nextInt();
 	}
 	
-	public void menu() {
-		 System.out.println("\n--- MENU ---");
-		 System.out.println("1) Cadastrar pessoa");
-		 System.out.println("2) Listar pessoas cadastradas");
-		 System.out.println("3) cadastrar produtos");
-		 System.out.println("4) Listar produtos");
-		 System.out.println("5) Editar produto");
-		 System.out.println("6) Excluir produto");
-		 System.out.println("7) Editar Pessoas");
-		 System.out.println("8) excluir Pessoas");
-		 System.out.println("9) Sair do sistema");
-		 System.out.println("--------------------");
 
-	 }
 
 		public Pessoa cadastrarPessoa() {
 			Pessoa pessoa = new Pessoa();
@@ -240,7 +228,39 @@ public class PessoaController {
 			pessoas.remove(idPessoa);
 		}
 		
-	
+		
+		public void menu() {
+			System.out.println("1)Cadastrar ");
+			System.out.println("2)Editar");
+			System.out.println("3) Listar");
+			System.out.println("4) Excluir");
+			
+			System.out.println("Informe o campo para ser editado: ");
+			int opcao = tec.nextInt();
+			
+			switch(opcao) {
+			
+			case 1 :	
+				
+				break;
+			
+			case 2 :
+				
+				break;
+				
+				
+			case 3 :
+				break;
+				
+				
+			case 4 :
+				break;
+				
+			
+			}
+		}
+		
+		
 	}				
 		
 

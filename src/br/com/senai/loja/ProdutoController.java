@@ -162,6 +162,41 @@ public class ProdutoController {
 			produtos.remove(idProduto);
 		}
 		
-	}	
+		public void menu() {
+			System.out.println("1) Cadastrar ");
+			System.out.println("2) Listar ");
+			System.out.println("3) Editar");
+			System.out.println("4) Excluir");
+		
+			
+			
+			System.out.println("Informe o campo para ser editado: ");
+			int opcao = tec.nextInt();
+			
+			switch(opcao) {
+			
+			case 1 :	
+				
+				break;
+			
+			case 2 :
+				
+				break;
+				
+				
+			case 3 :
+				
+				break;
+				
+				
+			case 4 :
+			
+				break;
+				
+			
+			}
+		
+		}
+}	
 
 

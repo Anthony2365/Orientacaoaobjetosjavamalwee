@@ -5,17 +5,17 @@ import br.com.senai.produto.Produto;
 //CLASSE
 public class Venda {
 	//ATRIBUTOS
-	private Pessoa pessoaa;
+	private Pessoa pessoa;
 	private Produto produto;
 	private int quantidade;
 	private double valor;
 	
 	//METODOS
 	public Pessoa getPessoaa() {
-		return pessoaa;
+		return pessoa;
 	}
-	public void setPessoaa(Pessoa pessoaa) {
-		this.pessoaa = pessoaa;
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
 	}
 	public Produto getProduto() {
 		return produto;

@@ -2,10 +2,13 @@ package br.com.anthony;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import br.com.anthony.pessoa.Pessoa;
 import br.com.anthony.pessoa.PessoaController;
 import br.com.senai.loja.ProdutoController;
+import br.com.senai.loja.Venda;
+import br.com.senai.loja.VendaController;
 import br.com.senai.produto.Produto;
 
 
@@ -15,6 +18,8 @@ public class ProgramaPrincipal {
 		
 		List<Pessoa> pessoas = new ArrayList<>();
 		List<Produto> produtos = new ArrayList<Produto>();
+		List<Venda> vendas = new ArrayList<Venda>();
+		
 		
 		Produto produto = new Produto(
 			"Abacate",
@@ -27,15 +32,14 @@ public class ProgramaPrincipal {
 		
 		PessoaController pessoaControler = new PessoaController();
 		ProdutoController produtoController = new ProdutoController();
-		
+		VendaController vendaController = new VendaController();
 		
 		boolean sair = false;
 		
 		
 		do {
 			
-			pessoaControler.menu();
-			
+		
 			
 			int opcao = pessoaControler.leOpcao();
 			
@@ -73,7 +77,17 @@ public class ProgramaPrincipal {
 				pessoaControler.excluirPessoa(pessoas);
 				break;
 				
-			case 9:
+			case 9 :
+				vendaController.listarVenda(vendas);
+				break;
+				
+			case 10 :
+				vendas.add(vendaController.cadastrarVenda(produtos, pessoas));
+				vendaController.cadastrarVenda(produtos, pessoas);
+				break;
+				
+				
+			case 12:
 				sair = true; 
 				break;
 				
@@ -87,5 +101,36 @@ public class ProgramaPrincipal {
 		System.out.println("Sistema finalizado!");
 		
 	}
-	 
+	public void menu() {
+		 System.out.println("\n--- MENU ---");
+		 System.out.println("1) Pessoa");
+		 System.out.println("2) Produto");
+		 System.out.println("3) Venda");
+		 System.out.println("4) Sair do Sistema");
+		 System.out.println("Informe o campo para ser editado: ");
+		 
+		 Scanner tec = new Scanner(System.in);
+		 
+			int opcao = tec.nextInt();
+			
+			switch(opcao) {
+			
+			case 1 :	
+				
+				break;
+			
+			case 2 :
+				break;
+				
+				
+			case 3 :
+				break;
+				
+				
+			case 4 :
+				break;
+				
+			
+			}
+	}
 }
