@@ -229,31 +229,37 @@ public class PessoaController {
 		}
 		
 		
-		public void menu() {
+		public void menu(List<Pessoa> pessoas) {
 			System.out.println("1)Cadastrar ");
 			System.out.println("2)Editar");
 			System.out.println("3) Listar");
 			System.out.println("4) Excluir");
 			
-			System.out.println("Informe o campo para ser editado: ");
+			System.out.print("Informe o campo para ser editado: ");
+			Scanner tec = new Scanner(System.in);
 			int opcao = tec.nextInt();
+			
 			
 			switch(opcao) {
 			
 			case 1 :	
-				
+				pessoas.add(cadastrarPessoa());
 				break;
 			
 			case 2 :
+				editarPessoa(pessoas);
 				
 				break;
 				
 				
 			case 3 :
+				ListarPessoas(pessoas);
 				break;
 				
 				
 			case 4 :
+				excluirPessoa(pessoas);
+
 				break;
 				
 			

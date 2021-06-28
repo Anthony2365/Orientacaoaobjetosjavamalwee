@@ -1,5 +1,6 @@
 package br.com.senai.loja;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class VendaController {
 	private Scanner tec;
 	private ProdutoController produtoController;
 	private PessoaController pessoaController;
-	
+	private List<Venda> vendas = new ArrayList<Venda>();
 	
 	public VendaController() {
 		tec = new Scanner(System.in);
@@ -63,7 +64,7 @@ public class VendaController {
 		Pessoa pessoa = new Pessoa();
 		
 		System.out.println("Informe o Id da pessoa: ");
-		int idPessoa = tec.nextInt();
+		int idPessoa = tec.nextInt()-1;
 		
 		pessoa.setNome(pessoas.get(idPessoa).getNome());
 		pessoa.setAltura(pessoas.get(idPessoa).getAltura());
@@ -92,20 +93,22 @@ public class VendaController {
 	}
 
 	
-	public void menu() {
+	public void menu(List<Pessoa> pessoas,List<Produto> produtos ) {
 		System.out.println("1) Cadastrar ");
 		System.out.println("2) Listar");
 		
-		System.out.println("Informe o campo para ser editado: ");
+		System.out.print("Informe a opção desejada:  ");
 		int opcao = tec.nextInt();
 		
 		switch(opcao) {
 		
 		case 1 :
+			vendas.add(cadastrarVenda(produtos, pessoas));
 			
 		break;
 		
 		case 2 :
+			listarVenda(vendas);
 			break;
 			
 			

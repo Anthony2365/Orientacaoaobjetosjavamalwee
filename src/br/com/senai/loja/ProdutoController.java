@@ -162,7 +162,7 @@ public class ProdutoController {
 			produtos.remove(idProduto);
 		}
 		
-		public void menu() {
+		public void menu(List<Produto> produtos) {
 			System.out.println("1) Cadastrar ");
 			System.out.println("2) Listar ");
 			System.out.println("3) Editar");
@@ -170,31 +170,36 @@ public class ProdutoController {
 		
 			
 			
-			System.out.println("Informe o campo para ser editado: ");
+			System.out.print("Informe o campo para ser editado: ");
 			int opcao = tec.nextInt();
 			
 			switch(opcao) {
 			
-			case 1 :	
+			case 1 :
+				produtos.add(cadastrarProduto());
 				
 				break;
 			
 			case 2 :
+				ListarProduto(produtos);
 				
 				break;
 				
 				
 			case 3 :
+				editarProduto(produtos);
 				
 				break;
 				
 				
 			case 4 :
+				excluirProduto(produtos);
 			
 				break;
 				
 			
 			}
+			
 		
 		}
 }	
